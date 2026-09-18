@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Bohío — Un rinconcito pa' estar juntos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="leaves">
+
+<!-- ============== FONDO DE PÁGINA (fotos 6, 7, 8) ============== -->
+<div class="bg-slideshow" aria-hidden="true">
+  <div class="bg-slide" style="background-image:url('imagenes/_ (6).jpeg')"></div>
+  <div class="bg-slide" style="background-image:url('imagenes/_ (7).jpeg')"></div>
+  <div class="bg-slide" style="background-image:url('imagenes/_(8).jpeg')"></div>
+</div>
+<div class="bg-scrim" aria-hidden="true"></div>
+
+<!-- ============== FONDOS ANIMADOS (hojas / lluvia) ============== -->
+<div class="weather-layer" data-weather="leaves" aria-hidden="true">
+  <span class="leaf l1"></span><span class="leaf l2"></span><span class="leaf l3"></span>
+  <span class="leaf l4"></span><span class="leaf l5"></span><span class="leaf l6"></span>
+  <span class="leaf l7"></span><span class="leaf l8"></span><span class="leaf l9"></span>
+  <span class="leaf l10"></span><span class="leaf l11"></span><span class="leaf l12"></span>
+  <span class="leaf l13"></span><span class="leaf l14"></span><span class="leaf l15"></span>
+  <span class="leaf l16"></span><span class="leaf l17"></span><span class="leaf l18"></span>
+</div>
+<div class="weather-layer" data-weather="rain" aria-hidden="true">
+  <span class="drop d1"></span><span class="drop d2"></span><span class="drop d3"></span>
+  <span class="drop d4"></span><span class="drop d5"></span><span class="drop d6"></span>
+  <span class="drop d7"></span><span class="drop d8"></span><span class="drop d9"></span>
+  <span class="drop d10"></span><span class="drop d11"></span><span class="drop d12"></span>
+  <span class="drop d13"></span><span class="drop d14"></span><span class="drop d15"></span>
+  <span class="drop d16"></span><span class="drop d17"></span><span class="drop d18"></span>
+  <span class="drop d19"></span><span class="drop d20"></span><span class="drop d21"></span>
+</div>
+
+<nav class="navbar">
+  <a class="nav-logo" href="#inicio">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3 3 12h2v9h5v-6h4v6h5v-9h2L12 3z" fill="currentColor"/></svg>
+    el bohío
+  </a>
+  <ul class="nav-links">
+    <li><a href="#radio">La Radio</a></li>
+    <li><a href="#tocadiscos">Tocadiscos</a></li>
+    <li><a href="#album">Álbum</a></li>
+    <li><a href="#tablon">Tablón</a></li>
+    <li><a href="#fotos">Fotos viejas</a></li>
+    <li><a href="#circulo" class="cta-link">Entrar al Bohío</a></li>
+    <li><a href="#bitacora">Bitácora</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<main>
+
+<!-- ==================== HERO / ILUSTRACIÓN ==================== -->
+<section id="inicio" class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">— un refugio virtual —</p>
+    <h1>El Bohío</h1>
+    <p class="tagline">Un rinconcito pa' estar juntos, escuchar música, pegar fotos viejas y saludar.</p>
+  </div>
+
+  <div class="bohio-wrap">
+    <img class="bohio-foto" src="imagenes/_ (5).jpeg"
+         alt="Foto del bohío, el refugio de todos"
+         loading="eager">
+  </div>
+
+  <p class="hint">📸 Esta es la foto del bohío. Abajo encuentras todo: <strong>la radio</strong>, las <strong>fotos viejas</strong>, el <strong>tablón</strong>, la <strong>videollamada</strong> y la <strong>bitácora</strong>.</p>
+
+  <div class="hero-actions">
+    <button id="entrarBtn" class="btn btn-big">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 12l18-7-5 13-6-4-5-4 9-5-7 3z" fill="currentColor"/></svg>
+      Entrar al Bohío
+    </button>
+    <button id="weatherBtn" class="btn btn-ghost" aria-pressed="false">🌿 Día soleado / 🌧️</button>
+  </div>
+</section>
+
+
+<!-- ==================== LA RADIO ==================== -->
+<section id="radio" class="panel panel-paper">
+  <div class="panel-head">
+    <span class="chip">🎵</span>
+    <div>
+      <p class="eyebrow">estación #1</p>
+      <h2>La Radio del Bohío</h2>
+      <p class="lead">Soniditos chill para estudiar, cocinar o simplemente estar. Arriba, radio en vivo; abajo, música del bohío 🥁🌱</p>
+    </div>
+  </div>
+
+  <div class="player">
+    <div class="disc" id="disc" aria-hidden="true">
+      <span class="disc-grooves"></span><span class="disc-hole"></span>
+    </div>
+    <div class="player-body">
+      <div class="now-playing">
+        <div class="np-status"><span class="dot" id="npDot"></span><span id="npStatus">Sin señales</span></div>
+        <strong id="npTitle">Elige una estación</strong>
+        <span id="npMeta" class="np-meta">música en vivo, sin anuncios 🍃</span>
+      </div>
+      <div class="stations" id="stations" role="listbox" aria-label="Estaciones"></div>
+      <div class="player-controls">
+        <button id="playBtn" class="btn btn-big" disabled>▶ Play</button>
+        <label class="vol">
+          🔊 <input type="range" id="vol" min="0" max="1" step="0.02" value="0.7">
+        </label>
+      </div>
+    </div>
+  </div>
+  <audio id="audio" preload="none"></audio>
+</section>
+
+<!-- ==================== EL TOCADISCOS ==================== -->
+<section id="tocadiscos" class="panel panel-turntable">
+  <div class="panel-head">
+    <span class="chip">💿</span>
+    <div>
+      <p class="eyebrow">estación #2</p>
+      <h2>El Tocadiscos</h2>
+      <p class="lead">Cada disco es un playlist de un integrante de La Química del Bochinche. Toca un disco para ponerlo en la platina 🎧</p>
+    </div>
+  </div>
+
+  <div class="tt-scene">
+    <div class="platter-wrap" aria-live="polite">
+      <div class="tonearm"><span></span></div>
+      <div class="platter">
+        <div class="record" id="activeDisc">
+          <span class="rlabel" id="activeLabel">?</span>
+          <span class="rname" id="activeName">toca un disco</span>
+        </div>
+      </div>
+      <button id="pauseDiscBtn" class="btn btn-ghost pause-btn">⏸ Pausar discos</button>
+    </div>
+    <div class="rack-head">
+      <p>Los discos del grupo</p>
+      <div class="rack" id="rack"></div>
+    </div>
+  </div>
+
+  <div class="queue" id="queue">
+    <div class="qempty">🎵 ¿Qué disco ponemos? Toca uno arriba y lo sonamos.</div>
+  </div>
+  <p class="form-note">ℹ️ Los discos de Spotify suenan directo si entras con tu Spotify (Premium) abierto en el navegador. Los videos de YouTube suenan siempre. Todo se ve igual aunque no suene ✨</p>
+</section>
+
+<!-- ==================== ÁLBUM DEL GRUPO ==================== -->
+<section id="album" class="panel panel-gallery">
+  <div class="panel-head">
+    <span class="chip">🖼️</span>
+    <div>
+      <p class="eyebrow">la química del bochinche</p>
+      <h2>Álbum del Grupo</h2>
+      <p class="lead">Las fotos que ustedes mandaron al bohío. Clic en una para verla grandota.</p>
+    </div>
+  </div>
+  <div class="gallery album-grid" id="albumGrid"></div>
+  <p class="form-note">¿Tienes más fotos? Pásamelas a la carpeta y las añadimos 🌻</p>
+</section>
+
+<!-- ==================== TABLÓN DE AVISOS ==================== -->
+<section id="tablon" class="panel panel-cork">
+  <div class="panel-head">
+    <span class="chip">📌</span>
+    <div>
+      <p class="eyebrow">muro de recuerdos</p>
+      <h2>El Tablón de Avisos</h2>
+      <p class="lead">Post-its con memes, saludos y momentos. Todo queda pegado en el corcho (tu navegador lo recuerda).</p>
+    </div>
+  </div>
+
+  <form id="noteForm" class="note-form">
+    <div class="note-palette" id="notePalette" role="radiogroup" aria-label="Color de la nota">
+      <label><input type="radio" name="color" value="#fff3b0" checked><span style="background:#fff3b0"></span></label>
+      <label><input type="radio" name="color" value="#d7f5c9"><span style="background:#d7f5c9"></span></label>
+      <label><input type="radio" name="color" value="#ffe0ef"><span style="background:#ffe0ef"></span></label>
+      <label><input type="radio" name="color" value="#d9ecff"><span style="background:#d9ecff"></span></label>
+      <label><input type="radio" name="color" value="#f5ddd3"><span style="background:#f5ddd3"></span></label>
+    </div>
+    <input type="text" id="noteText" maxlength="220" placeholder="Escribe tu aviso, meme o recuerdo…" required>
+    <button type="submit" class="btn">Pegar nota 📌</button>
+    <p class="form-note">Guárdalo donde quieras: tus notas viven en este navegador.</p>
+  </form>
+
+  <div class="notes" id="notes" aria-live="polite"></div>
+</section>
+
+<!-- ==================== MURO DE FOTOS ==================== -->
+<section id="fotos" class="panel panel-gallery">
+  <div class="panel-head">
+    <span class="chip">📷</span>
+    <div>
+      <p class="eyebrow">debajo del techo de lámina</p>
+      <h2>Muro de Fotos Viejas</h2>
+      <p class="lead">Las que duelen bonito. Clic en una foto para verla grande y pegá tus propias viejitas aquí.</p>
+    </div>
+  </div>
+  <input type="file" id="photoInput" accept="image/*" hidden multiple>
+  <div class="gallery" id="gallery"></div>
+  <button id="addPhotoBtn" class="btn btn-ghost">+ Pegar una foto vieja</button>
+</section>
+
+<!-- ==================== CÍRCULO DE CONVERSACIÓN ==================== -->
+<section id="circulo" class="panel panel-jitsi">
+  <div class="panel-head">
+    <span class="chip">📞</span>
+    <div>
+      <p class="eyebrow">zona de círculo</p>
+      <h2>El Círculo de Conversación</h2>
+      <p class="lead">Sala de voz y video gratis, sin contraseñas: solo entrar y saludar.</p>
+    </div>
+  </div>
+
+  <div class="circulo-cards">
+    <div class="ccard"><span>🤙</span><h3>En un clic</h3><p>Abre Jitsi Meet con la sala ya creada.</p></div>
+    <div class="ccard"><span>🔓</span><h3>Sin contraseña</h3><p>Rollos fuera. Nadie se queda afuera.</p></div>
+    <div class="ccard"><span>🎤</span><h3>Voz y video</h3><p>Cámara, pantalla y buena vibra.</p></div>
+  </div>
+
+  <div class="enter-zone">
+    <a id="jitsiLink" class="btn btn-big" target="_blank" rel="noopener"
+       href="https://meet.jit.si/bohio-de-los-amigos">
+      🏠 Entrar al Bohío (Jitsi Meet)
+    </a>
+    <p class="form-note">¿Mejor Discord? Cambia el enlace en <code>app.js</code> o pega aquí tu invitación:</p>
+    <div class="discord-row">
+      <input type="url" id="discordInput" placeholder="https://discord.gg/tu-codigo" value="">
+      <button id="discordBtn" class="btn">Conectar por Discord</button>
+      <p id="discordMsg" class="form-note"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BITÁCORA / LIBRO DE VISITAS ==================== -->
+<section id="bitacora" class="panel panel-paper">
+  <div class="panel-head">
+    <span class="chip">📖</span>
+    <div>
+      <p class="eyebrow">libro de visitas</p>
+      <h2>La Bitácora del Bohío</h2>
+      <p class="lead">Deja constancia de qué día pasaste por aquí a saludar.</p>
+    </div>
+  </div>
+
+  <form id="visitForm" class="visit-form">
+    <input type="text" id="visitName" placeholder="¿Quién es usted?" maxlength="40" required>
+    <input type="date" id="visitDate" required>
+    <input type="text" id="visitMsg" placeholder="¿Qué dijo / hizo por aquí…" maxlength="200">
+    <button type="submit" class="btn">Firmar la bitácora ✍️</button>
+  </form>
+
+  <ul class="log" id="log" aria-live="polite"></ul>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>hecho con ♥ para el bohío · así como en la escuela, pero con WiFi 🍃</p>
+  <p class="footer-links"><a href="#radio">radio</a> · <a href="#tablon">tablón</a> · <a href="#fotos">fotos</a> · <a href="#circulo">círculo</a> · <a href="#bitacora">bitácora</a></p>
+</footer>
+
+<!-- lightbox -->
+<div id="lightbox" class="lightbox" hidden>
+  <div class="lb-inner"><img id="lbImg" src="" alt="Foto ampliada"><button id="lbClose" class="lb-close" aria-label="Cerrar">✕</button></div>
+</div>
+
+<script src="album-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

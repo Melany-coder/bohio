@@ -1,0 +1,37 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "Vox3.moc3",
+		"Textures": [
+			"Vox3.4096/texture_00.png"
+		],
+		"Physics": "Vox3.physics3.json",
+		"DisplayInfo": "Vox3.cdi3.json",
+		"Expressions": [
+			{
+				"Name": "Szpiral",
+				"File": "Szpiral.exp3.json"
+			},
+			{
+				"Name": "Mad",
+				"File": "Mad.exp3.json"
+			}
+		]
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	],
+	"HitAreas": []
+}

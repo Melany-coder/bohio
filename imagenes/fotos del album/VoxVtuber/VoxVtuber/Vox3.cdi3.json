@@ -1,0 +1,306 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "",
+			"Name": "Angle X"
+		},
+		{
+			"Id": "Param4",
+			"GroupId": "",
+			"Name": "Spiral"
+		},
+		{
+			"Id": "Param5",
+			"GroupId": "",
+			"Name": "Spiral"
+		},
+		{
+			"Id": "Param6",
+			"GroupId": "",
+			"Name": "Bzzt"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "",
+			"Name": "Angle Y"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"GroupId": "",
+			"Name": "Angle Z"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"GroupId": "",
+			"Name": "EyeL Open"
+		},
+		{
+			"Id": "ParamEyeLSmile",
+			"GroupId": "",
+			"Name": "EyeL Smile"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"GroupId": "",
+			"Name": "EyeR Open"
+		},
+		{
+			"Id": "ParamEyeRSmile",
+			"GroupId": "",
+			"Name": "EyeR Smile"
+		},
+		{
+			"Id": "Param3",
+			"GroupId": "",
+			"Name": "Mad"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"GroupId": "",
+			"Name": "Eyeball X"
+		},
+		{
+			"Id": "ParamEyeBallY",
+			"GroupId": "",
+			"Name": "Eyeball Y"
+		},
+		{
+			"Id": "ParamBrowLY",
+			"GroupId": "",
+			"Name": "BrowL Y"
+		},
+		{
+			"Id": "ParamBrowRY",
+			"GroupId": "",
+			"Name": "BrowR Y"
+		},
+		{
+			"Id": "ParamBrowLX",
+			"GroupId": "",
+			"Name": "BrowL X"
+		},
+		{
+			"Id": "ParamBrowRX",
+			"GroupId": "",
+			"Name": "BrowR X"
+		},
+		{
+			"Id": "ParamBrowLAngle",
+			"GroupId": "",
+			"Name": "BrowL Angle"
+		},
+		{
+			"Id": "ParamBrowRAngle",
+			"GroupId": "",
+			"Name": "BrowR Angle"
+		},
+		{
+			"Id": "ParamBrowLForm",
+			"GroupId": "",
+			"Name": "BrowL Form"
+		},
+		{
+			"Id": "ParamBrowRForm",
+			"GroupId": "",
+			"Name": "BrowR Form"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"GroupId": "",
+			"Name": "Mouth Form"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"GroupId": "",
+			"Name": "Mouth Open"
+		},
+		{
+			"Id": "ParamCheek",
+			"GroupId": "",
+			"Name": "Cheek"
+		},
+		{
+			"Id": "ParamBodyAngleX",
+			"GroupId": "",
+			"Name": "Body X"
+		},
+		{
+			"Id": "ParamBodyAngleY",
+			"GroupId": "",
+			"Name": "Body Y"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"GroupId": "",
+			"Name": "Body Z"
+		},
+		{
+			"Id": "ParamBreath",
+			"GroupId": "",
+			"Name": "Breath"
+		},
+		{
+			"Id": "ParamHairFront",
+			"GroupId": "",
+			"Name": "Hair Move Front"
+		},
+		{
+			"Id": "ParamHairBack",
+			"GroupId": "",
+			"Name": "Hair Move Back"
+		},
+		{
+			"Id": "ParamHairSide",
+			"GroupId": "",
+			"Name": "Hair Move Side"
+		},
+		{
+			"Id": "Param2",
+			"GroupId": "",
+			"Name": "XTOR"
+		},
+		{
+			"Id": "Param",
+			"GroupId": "",
+			"Name": "YTOR"
+		},
+		{
+			"Id": "Param7",
+			"GroupId": "",
+			"Name": "WGG"
+		},
+		{
+			"Id": "Param8",
+			"GroupId": "",
+			"Name": "WGG"
+		},
+		{
+			"Id": "Param9",
+			"GroupId": "",
+			"Name": "wiggi"
+		}
+	],
+	"ParameterGroups": [],
+	"Parts": [
+		{
+			"Id": "Part20",
+			"Name": "Illustration57.psd"
+		},
+		{
+			"Id": "Part33",
+			"Name": "what am i doing brah2.psd (Corresponding layer not found)"
+		},
+		{
+			"Id": "Part31",
+			"Name": "what am i doing brah2.psd (Corresponding layer not found)"
+		},
+		{
+			"Id": "Part25",
+			"Name": "what am i doing brah2.psd (Corresponding layer not found)"
+		},
+		{
+			"Id": "Part",
+			"Name": "Folder 2"
+		},
+		{
+			"Id": "Part19",
+			"Name": "Folder 2"
+		},
+		{
+			"Id": "Part13",
+			"Name": "Folder 2"
+		},
+		{
+			"Id": "Part2",
+			"Name": "Folder 20"
+		},
+		{
+			"Id": "Part3",
+			"Name": "Folder 3"
+		},
+		{
+			"Id": "Part10",
+			"Name": "Folder 13"
+		},
+		{
+			"Id": "Part11",
+			"Name": "Folder 8 Copy 2"
+		},
+		{
+			"Id": "Part12",
+			"Name": "Folder 8 Copy"
+		},
+		{
+			"Id": "Part21",
+			"Name": "Folder 3"
+		},
+		{
+			"Id": "Part32",
+			"Name": "Folder 8 Copy"
+		},
+		{
+			"Id": "Part15",
+			"Name": "Folder 3"
+		},
+		{
+			"Id": "Part4",
+			"Name": "Folder 17"
+		},
+		{
+			"Id": "Part7",
+			"Name": "Folder 16"
+		},
+		{
+			"Id": "Part14",
+			"Name": "Folder 2"
+		},
+		{
+			"Id": "Part22",
+			"Name": "Folder 17"
+		},
+		{
+			"Id": "Part16",
+			"Name": "Folder 17"
+		},
+		{
+			"Id": "Part5",
+			"Name": "Folder 18"
+		},
+		{
+			"Id": "Part6",
+			"Name": "Folder 19"
+		},
+		{
+			"Id": "Part8",
+			"Name": "Folder 6"
+		},
+		{
+			"Id": "Part9",
+			"Name": "Folder 5"
+		},
+		{
+			"Id": "Part23",
+			"Name": "Folder 18"
+		},
+		{
+			"Id": "Part24",
+			"Name": "Folder 19"
+		},
+		{
+			"Id": "Part17",
+			"Name": "Folder 18"
+		},
+		{
+			"Id": "Part18",
+			"Name": "Folder 19"
+		}
+	],
+	"CombinedParameters": [
+		[
+			"ParamEyeBallX",
+			"ParamEyeBallY"
+		]
+	]
+}

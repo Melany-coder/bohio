@@ -1,0 +1,45 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "VoxUpdate.moc3",
+		"Textures": [
+			"VoxUpdate.4096/texture_00.png"
+		],
+		"Physics": "VoxUpdate.physics3.json",
+		"DisplayInfo": "VoxUpdate.cdi3.json",
+		"Expressions": [
+			{
+				"Name": "BSOD",
+				"File": "BSOD.exp3.json"
+			},
+			{
+				"Name": "Lost Signal",
+				"File": "Lost Signal.exp3.json"
+			},
+			{
+				"Name": "BI Glitch",
+				"File": "BI Glitch.exp3.json"
+			},
+			{
+				"Name": "MouthToggle",
+				"File": "MouthToggle.exp3.json"
+			}
+		]
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		}
+	],
+	"HitAreas": []
+}
