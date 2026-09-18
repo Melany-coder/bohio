@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"></head><body>
+<div id="out">esperando...</div>
+<script>
+(function(){
+  var out = document.getElementById('out'), left = 0, res = [];
+  function probe(label, url){
+    left++; var a = new Audio(); a.preload='auto'; var done=false;
+    function rep(m){ if(done) return; done=true; res.push(label+' = '+m); if(--left===0){ out.textContent = res.join(' | '); document.title='DONE'; } }
+    a.addEventListener('error', function(){ rep('ERR no='+a.networkState); });
+    a.addEventListener('canplay', function(){ try{ a.play().then(function(){ rep('PLAY OK'); }).catch(function(e){ rep('block '+e.name); }); }catch(e){ rep('blk'); } });
+    a.src = url; setTimeout(function(){ rep('TIMEOUT'); }, 14000);
+  }
+  probe('RP-192', 'https://stream.radioparadise.com/mp3-192');
+  probe('AC-MP3', 'https://ice1.somafm.com/groovesalad-128-mp3');
+  probe('Soma-Play128', 'https://play.somafm.com/groovesalad-128');
+})();
+</script></body></html>

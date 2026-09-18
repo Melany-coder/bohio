@@ -330,7 +330,16 @@
         { type: 'yt', id: 'zWytgJy-u8w', title: 'Marin · canción 1' },
         { type: 'yt', id: 'vB0-GUYW_uU', title: 'Marin · canción 2' },
         { type: 'yt', id: 'yBwYaXHhuNg', title: 'Marin · canción 3' },
-        { type: 'yt', id: 'QrSV9ZdvYfg', title: 'Marin · canción 4' }
+        { type: 'yt', id: 'QrSV9ZdvYfg', title: 'Marin · canción 4' },
+        { type: 'yt', id: 'ZloSpUYNpLw', title: 'Marin · canción 5' },
+        { type: 'yt', id: 'VCUDn-B6Ack', title: 'Marin · canción 6' },
+        { type: 'yt', id: '7EBE4333MS8', title: 'Marin · canción 7' },
+        { type: 'yt', id: '2JXEp2im-LA', title: 'Marin · canción 8' },
+        { type: 'yt', id: 'ymJ1svwvpLQ', title: 'Marin · canción 9' },
+        { type: 'yt', id: 'WZkd2XUG2VU', title: 'Marin · canción 10' },
+        { type: 'yt', id: '15Me8nszoN0', title: 'Marin · canción 11' },
+        { type: 'yt', id: 'O6j4W0IdRC4', title: 'Marin · canción 12' },
+        { type: 'yt', id: 'sDMxQF18yvA', title: 'Marin · canción 13' }
       ]
     },
     {
