@@ -270,7 +270,19 @@
   <div class="lb-inner"><img id="lbImg" src="" alt="Foto ampliada"><button id="lbClose" class="lb-close" aria-label="Cerrar">✕</button></div>
 </div>
 
-<script src="album-data.js?v=2"></script>
-<script src="app.js?v=2"></script>
+<!-- registro: ¿cómo te llamás? -->
+<div id="nameModal" class="modal" hidden>
+  <div class="modal-box">
+    <p class="eyebrow">la química del bochinche</p>
+    <h3>¿Cómo te llamás? 🌻</h3>
+    <p class="form-note">Así dejamos tu nombre en las notas y en la bitácora. Se guarda en este navegador.</p>
+    <input id="nameInput" type="text" maxlength="24" placeholder="Tu nombre" autocomplete="name">
+    <button id="nameSave" class="btn">Guardar y entrar</button>
+  </div>
+</div>
+
+<script src="db.js"></script>
+<script src="album-data.js?v=3"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

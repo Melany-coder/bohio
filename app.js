@@ -179,8 +179,10 @@
       div.innerHTML = `<span class="tape"></span>
         <p></p>
         <span class="note-when">${fmtDate(n.when)}</span>
+        <span class="note-who"></span>
         <button class="del" aria-label="Quitar nota">✕</button>`;
       div.querySelector('p').textContent = n.text || '';
+      div.querySelector('.note-who').textContent = n.name ? `${n.name} ✍️` : '';
       div.querySelector('.del').addEventListener('click', () => {
         const nn = store.get('bohio.notes', []).filter(x => x !== n);
         store.set('bohio.notes', nn);
@@ -462,4 +464,56 @@
     const paused = ttScene.classList.toggle('paused');
     pauseDiscBtn.innerHTML = paused ? '▶ Seguir girando' : '⏸ Pausar discos';
   });
+
+  /* ==================== NUBE COMPARTIDA + REGISTRO ==================== */
+  const NAME_KEY = 'bohio.me';
+  const myName = () => store.get(NAME_KEY, '');
+  const setMyName = (n) => {
+    store.set(NAME_KEY, n);
+    const vn = $('#visitName'); if (vn) vn.value = n;
+  };
+
+  const nameModal = $('#nameModal');
+  const nameInput = $('#nameInput');
+  $('#nameSave').addEventListener('click', () => {
+    const n = (nameInput.value || '').trim();
+    if (!n) return;
+    setMyName(n);
+    nameModal.hidden = true;
+    shareNow(true);
+  });
+  nameModal.addEventListener('click', (e) => { if (e.target === nameModal) nameModal.hidden = true; });
+  if (!myName()) {
+    nameModal.hidden = false;
+    setTimeout(() => nameInput.focus(), 400);
+  }
+  $('#visitName').value = myName() || $('#visitName').value;
+
+  const cloud = window.BohioCloud;
+  const stamps = (arr) => (arr || []).map(x => (x.name ? x : { ...x, name: myName() }));
+  let saveTimer = null;
+
+  function shareNow(now) {
+    if (!cloud) return;
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(async () => {
+      const local = {
+        notes: stamps(store.get('bohio.notes', [])),
+        visits: stamps(store.get('bohio.visits', [])),
+        photos: store.get('bohio.photos', [])
+      };
+      const merged = await cloud.sync(local);
+      ['notes', 'visits', 'photos'].forEach(k => {
+        const cur = store.get('bohio.' + k, []);
+        const m = merged[k] || [];
+        if (JSON.stringify(cur) !== JSON.stringify(m)) {
+          store.set('bohio.' + k, m);
+        }
+      });
+      renderNotes(); renderLog(); renderPhotos();
+    }, now ? 0 : 1500);
+  }
+
+  shareNow(true);
+  setInterval(() => shareNow(true), 20000);
 })();
